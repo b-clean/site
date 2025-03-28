@@ -10,12 +10,13 @@ function startPrank() {
     window.addEventListener("touchstart", playAudio);
     window.addEventListener("keydown", playAudio);
     window.addEventListener("resize", () => {
-        stopText();
-        removeText();
-        spawnTextOnResize();
+        spawnTextOnResize(15);
         playAudio();
     });
-    
+    window.addEventListener("DOMContentLoaded", () => {
+        spawnTextOnResize(15);
+        playAudio();
+    });
 
     // Adjust number of texts spawned based on screen width
     if (window.innerWidth > 800) {
