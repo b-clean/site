@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown</title>
     <link rel="stylesheet" href="css/prank.css">
 </head>
+
 <body>
     <audio id="backgroundAudio" src="music/never.MP3" autoplay loop></audio>
     <div id="countdown"></div>
     <div id="message">Surprise! 🎉</div>
     <audio id="finalAudio" src="music/countdown.mp3"></audio>
     <script src="js/prank.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6HJLSQJ79"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-D6HJLSQJ79');
+    </script>
 </body>
+
 </html>
