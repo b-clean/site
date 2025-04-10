@@ -47,7 +47,7 @@ function startCountdown() {
     const backgroundAudio = document.getElementById("backgroundAudio");
     const videoElement = document.getElementById("fullScreenVideo"); // Get video element
     const messageElement = document.getElementById("message");
-    const targetDate = new Date("2025-04-11T13:15:00");
+    const targetDate = new Date("2025-04-10T18:40:00");
 
     const interval = setInterval(() => {
         const now = new Date();
