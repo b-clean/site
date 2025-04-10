@@ -11,9 +11,22 @@ body {
     position: relative;
 }
 #countdown {
+    position: fixed;
+    top: 50%;  /* Adjust for placement */
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 5rem;
     margin-bottom: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    z-index: 9999; /* Ensures it's always on top */
+    pointer-events: none; /* Prevents interference from floating text */
+    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 10px;
 }
+
 #message {
     font-size: 2rem;
     display: none;
@@ -75,4 +88,54 @@ body {
     100% {
         transform: scale(1) translateY(0);
     }
+}
+
+.firework-name {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    animation: flyUp 2s ease-out forwards;
+}
+
+.explosion-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+
+@keyframes flyUp {
+    0% { bottom: 0; opacity: 1; }
+    100% { bottom: 60vh; opacity: 0; }
+}
+
+@keyframes explodeFade {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+@keyframes explode {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.abi25-word {
+    position: absolute;
+    font-weight: bold;
+    font-size: 120px;
+    color: white;
+    text-shadow: 0 0 10px #001f3f, 0 0 20px #001f3f, 0 0 30px #001f3f; /* Dark bluish outline */
+    pointer-events: none;
+    z-index: 9999;
 }
