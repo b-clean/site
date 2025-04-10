@@ -62,6 +62,7 @@ function startCountdown() {
             clearInterval(interval); // Stop countdown
             stopAllEvents(); // Stop everything
             removeAllElements(); // Remove all elements
+        playAudio();
 
             //lauch firework
             launchFinalFireworks(); // Launch fireworks
